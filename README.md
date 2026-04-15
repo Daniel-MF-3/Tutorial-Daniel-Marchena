@@ -7,7 +7,7 @@ En apartado se experimentara varios casos con 5 inversores, 3 inversores, 3 inve
 
 ## Valores teoricos.
 
-Se desmostrarán los calculos del periodo y frecuencia. Según la hojas datos, un el inversor **74LS04** tiene como $t_d \approx 10\mathrm{ns}$ [2]. Con este dato pones aplicar la siguiente formula:
+Se desmostrarán los calculos del periodo y frecuencia. Según la hoja de datos, un el inversor **74LS04** tiene como $t_d \approx 10\mathrm{ns}$ [2]. Con este dato se puede aplicar la siguiente formula:
 
 $$
 T= 2\times n \times t_d 
@@ -100,7 +100,7 @@ Está parte se mostraran las imagenes de las ondas y datos que se obtuvieron del
 
 Primero se mostrára la imagen del circuito en una protoboard y luego la onda que se consiguio en el osciloscopio:
 
-<img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/767b9c15-f845-4348-a139-e8374581f801" />
+<img width="1099" height="499" alt="image" src="https://github.com/user-attachments/assets/767b9c15-f845-4348-a139-e8374581f801" />
 <p align="center">
 1. Ensamblaje del oscilador de anillo de 5 inversores 
 </p>
