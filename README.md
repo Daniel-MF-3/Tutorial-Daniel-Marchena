@@ -28,14 +28,19 @@ El periodo:
 
 $$
 T= 2\times 5 \times 10 ns
-T= 100 ns
+
 $$
 
+$$
+T= 100 ns
+$$ 
 
 Frecuencia:
 
 $$
 f = \frac{1}{100 ns}
+$$
+$$
 f = 10 MHz
 $$
 
@@ -45,6 +50,8 @@ El periodo:
 
 $$
 T= 2\times 3 \times 10 ns
+$$
+$$
 T= 60 ns
 $$
 
@@ -53,6 +60,8 @@ Frecuencia:
 
 $$
 f = \frac{1}{60 ns}
+$$
+$$
 f = 16.7 MHz
 $$
 
@@ -62,6 +71,8 @@ El periodo:
 
 $$
 T= 2\times 1 \times 10 ns
+$$
+$$
 T= 20 ns
 $$
 
@@ -70,6 +81,8 @@ Frecuencia:
 
 $$
 f = \frac{1}{20 ns}
+$$
+$$
 f = 50 MHz
 $$
 
