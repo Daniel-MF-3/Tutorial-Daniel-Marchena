@@ -1,9 +1,15 @@
 ## 5. Oscilador de Anillo
-En apartado se experimentara  varios casos de un oscilador de anillo.
+
+
+Un oscilador de anillo es un circuito que está compuesto por un número impar de inversores conectados en cascada que forman un lazo cerrado, por lo que cada salida del último inversor se retroalimenta a la entrada del primero [1]. Debido que el retardo de propagación finito de cada inversor, la señal no puede estabilizarse en un estado lógico fijo, lo que provoca una oscilación continua entre niveles alto y bajo [1].
+
+En apartado se experimentara varios casos con 5 inversores, 3 inversores y 1 inversor. Primero se calcularán los valores teoricos para luego compararlo con los valores obtenidos en osciloscopio en laboratorio.
 
 ## Valores teoricos.
 
-Según los datos, un el inversor **74LS04** tiene como $t_d \approx 10\,\text{ns}$. Con este dato pones aplicar la siguiente formula:
+Se desmostrarán los calculos tanto de periodo
+
+Según la hojas datos, un el inversor **74LS04** tiene como $t_d \approx 10\mathrm{ns}$ [2]. Con este dato pones aplicar la siguiente formula:
 
 $$
 T= 2\times n \times t_d 
@@ -85,3 +91,12 @@ $$
 f = 50\mathrm{MHz}
 $$
 
+
+## Experimentos
+
+
+
+
+[1] J. M. Rabaey, A. Chandrakasan and B. Nikolić, Digital Integrated Circuits: A Design Perspective, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2003.
+
+[2] Texas Instruments, “SN74LS04 Hex Inverters Datasheet”, 2016.
