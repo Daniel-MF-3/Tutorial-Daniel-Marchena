@@ -99,8 +99,9 @@ Está parte se mostraran las imagenes de las ondas y datos que se obtuvieron del
 ### Caso de 5 inversores
 
 Primero se mostrára la imagen del circuito en una protoboard y luego la onda que se consiguio en el osciloscopio:
-
+<p align="center">
 <img width="799" height="399" alt="image" src="https://github.com/user-attachments/assets/767b9c15-f845-4348-a139-e8374581f801" />
+</p>
 <p align="center">
 1. Ensamblaje del oscilador de anillo de 5 inversores 
 </p>
