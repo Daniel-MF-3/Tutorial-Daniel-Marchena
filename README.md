@@ -31,16 +31,16 @@ T= 2\times 5 \times 10\mathrm{ns}
 $$
 
 $$
-T= 100\,\text{ns}
+T= 100\mathrm{ns}
 $$ 
 
 Frecuencia:
 
 $$
-f = \frac{1}{100\,\text{ns}}
+f = \frac{1}{100\mathrm{ns}}
 $$
 $$
-f = 10\,\text{MHz}
+f = 10\mathrm{MHz}
 $$
 
 ### Caso de 3 inversores
@@ -48,20 +48,20 @@ $$
 El periodo: 
 
 $$
-T= 2\times 3 \times 10\,\text{ns}
+T= 2\times 3 \times 10\mathrm{ns}
 $$
 $$
-T= 60\,\text{ns}
+T= 60\mathrm{ns}
 $$
 
 
 Frecuencia:
 
 $$
-f = \frac{1}{60\,\text{ns}}
+f = \frac{1}{60\mathrm{ns}}
 $$
 $$
-f = 16.7\,\text{MHz}
+f = 16.7\mathrm{MHz}
 $$
 
 ### Caso de 1 inversor
@@ -69,19 +69,19 @@ $$
 El periodo: 
 
 $$
-T= 2\times 1 \times 10\,\text{ns}
+T= 2\times 1 \times 10\mathrm{ns}
 $$
 $$
-T= 20\,\text{ns}
+T= 20\mathrm{ns}
 $$
 
 
 Frecuencia:
 
 $$
-f = \frac{1}{20\,\text{ns}}
+f = \frac{1}{20\mathrm{ns}}
 $$
 $$
-f = 50\,\text{MHz}
+f = 50\mathrm{MHz}
 $$
 
