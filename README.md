@@ -5,7 +5,7 @@ En apartado se experimentara  varios casos de un oscilador de anillo.
 
 Según los datos, un el inversor **74LS04** tiene como $t_d \approx 10 ns$. Con este dato pones aplicar la siguiente formula:
 
-## $T= 2\times n \times t_d $
+### $T= 2\times n \times t_d $
 
 <
 
