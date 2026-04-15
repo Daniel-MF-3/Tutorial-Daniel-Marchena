@@ -27,7 +27,7 @@ $$
 El periodo: 
 
 $$
-T= 2\times 5 \times 10\,\mathrm{ns}
+T= 2\times 5 \times 10\mathrm{ns}
 $$
 
 $$
