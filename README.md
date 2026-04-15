@@ -16,7 +16,9 @@ $t_d$ = tiempo de retardo de un inversor
 
 Al obtener el periodo se puede obtener la frecuencia : 
 
-### $ f = \frac{1}{T}$
+$$
+f = \frac{1}{T}
+$$ 
 ### Caso de 5 inversores
 
 
