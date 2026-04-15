@@ -1,11 +1,9 @@
-# Tutorial-Daniel-Marchena
+## 5. Oscilador de Anillo
+En apartado se experimentara  varios casos de un oscilador de anillo.
 
-<img width="800" height="480" alt="l3" src="https://github.com/user-attachments/assets/ac7aebad-940c-46a6-bd45-382f5cea7740" />
+## Valores teoricos.
 
- 100011_2=-32+0+0+0+2+1
+Según los datos, un el inversor **74LS04** tiene como $\t_d \approx 10 ns$ 
 
-Hola todo bien
-
-$3 \times 4 = 12$
-1/23
+<
 
