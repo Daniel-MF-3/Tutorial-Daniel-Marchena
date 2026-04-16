@@ -3,7 +3,22 @@
 
 Un oscilador de anillo es un circuito que está compuesto por un número impar de inversores conectados en cascada que forman un lazo cerrado, por lo que cada salida del último inversor se retroalimenta a la entrada del primero [1]. Debido que el retardo de propagación finito de cada inversor, la señal no puede estabilizarse en un estado lógico fijo, lo que provoca una oscilación continua entre niveles alto y bajo [1].
 
-En apartado se experimentara varios casos con 5 inversores, 3 inversores, 3 inversores con cable aproximadamente un 1 metro y 1 inversor. Primero se calcularán los valores teoricos para luego compararlo con los valores obtenidos en osciloscopio en laboratorio.
+
+
+<p align="center">
+<img width="515" height="107" alt="image" src="https://github.com/user-attachments/assets/eb3dcf77-0a43-4b77-a648-a8087c9102f7" />
+</p>
+
+
+En apartado se experimentara varios casos con 5 inversores, 3 inversores, 3 inversores con cable aproximadamente un 1 metro y 1 inversor. Primero se calcularán los valores teoricos para luego compararlo con los valores obtenidos en osciloscopio en laboratorio. En la siguiente imagen, se vera como se debe construir un oscilador de anillo:
+
+<p align="center">
+<img width="515" height="107" alt="image" src="https://github.com/user-attachments/assets/eb3dcf77-0a43-4b77-a648-a8087c9102f7" />
+</p>
+<p align="center">
+Oscilador de anillo basado en 74LS04.
+</p>
+
 
 ## Valores teoricos.
 
@@ -103,10 +118,15 @@ Primero se mostrára la imagen del circuito en una protoboard y luego la onda qu
 <img width="799" height="399" alt="image" src="https://github.com/user-attachments/assets/767b9c15-f845-4348-a139-e8374581f801" />
 </p>
 <p align="center">
-1. Ensamblaje del oscilador de anillo de 5 inversores 
+Fig. 2. Ensamblaje del oscilador de anillo de 5 inversores.
 </p>
 
-
+<p align="center">
+<img width="800" height="480" alt="l3" src="https://github.com/user-attachments/assets/3b14d5c4-bab7-42e7-8148-f14ab5c4c57b" />
+</p>
+<p align="center">
+Fig. 3. Onda obtenida del osciloscopio del oscilador de anillo de 5 inversores.
+</p>
 
 
 [1] J. M. Rabaey, A. Chandrakasan and B. Nikolić, Digital Integrated Circuits: A Design Perspective, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2003.
