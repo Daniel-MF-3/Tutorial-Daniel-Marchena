@@ -184,6 +184,16 @@ Fig. 9. Onda obtenida del osciloscopio del oscilador de anillo de 3 inversores c
 
 Resultados simalares a los teóricos y una onda cuadrada. Sin embargo un oscilador de anillo requiere un número impar mayor que uno de inversores para oscilar. Con un solo inversor, el sistema debería estabilizarse en un estado lógico fijo [3]. Estas oscilaciones no son estables ni confiables y suelen presentar frecuencias elevadas, como la observada experimentalmente [5].
 
+
+### Mapa de Karnaugh,
+
+Aquí hay un ejemplo uno de los mapas de Karnaugh que se hicieron para las ecuaciones del 7 segmentos del segmento e
+
+<img width="467" height="386" alt="Captura de pantalla 2026-04-17 115044" src="https://github.com/user-attachments/assets/d29f3b1e-3eaa-4ee8-8aee-3350bd5ba307" />
+
+Su ecuación: $e = B'D' + CD' + AC + AB$
+
+
 [1] J. M. Rabaey, A. Chandrakasan and B. Nikolić, Digital Integrated Circuits: A Design Perspective, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2003.
 
 [2] Texas Instruments, “SN74LS04 Hex Inverters Datasheet”, 2016.
