@@ -163,7 +163,7 @@ Fig. 6. Ensamblaje del oscilador de anillo de 3 inversores con un cable un metro
 Fig. 7. Onda obtenida del osciloscopio del oscilador de anillo de 3 inversores con cable un metro.
 </p>
 
-Curiosamente, con el cable da mejores resultados que uno normal, sin embargo es no quiere decir que con cable se soluciona los errores del caso anterior. Se debe que el cable proporciona un retardo adicional que reduce la frecuencia de oscilación y también afecta la estabilidad [4].
+Curiosamente con el cable de un metro da mejores resultados que uno normal, sin embargo es no quiere decir que con cable se soluciona los errores del caso anterior. Se debe que el cable proporciona un retardo adicional que reduce la frecuencia de oscilación y también afecta la estabilidad [4].
 
 ### Caso de 1 inversor
 
@@ -185,7 +185,11 @@ Fig. 9. Onda obtenida del osciloscopio del oscilador de anillo de 3 inversores c
 Resultados simalares a los teóricos y una onda cuadrada. Sin embargo un oscilador de anillo requiere un número impar mayor que uno de inversores para oscilar. Con un solo inversor, el sistema debería estabilizarse en un estado lógico fijo [3]. Estas oscilaciones no son estables ni confiables y suelen presentar frecuencias elevadas, como la observada experimentalmente [5].
 
 [1] J. M. Rabaey, A. Chandrakasan and B. Nikolić, Digital Integrated Circuits: A Design Perspective, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2003.
+
 [2] Texas Instruments, “SN74LS04 Hex Inverters Datasheet”, 2016.
+
 [3] J. M. Rabaey, A. Chandrakasan and B. Nikolić, Digital Integrated Circuits: A Design Perspective, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2003.
+
 [4] N. H. E. Weste and D. Harris, CMOS VLSI Design: A Circuits and Systems Perspective, 4th ed. Boston, MA, USA: Pearson, 2011.
+
 [5] P. Horowitz and W. Hill, The Art of Electronics, 3rd ed. Cambridge, U.K.: Cambridge University Press, 2015.
