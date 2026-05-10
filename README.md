@@ -59,11 +59,11 @@ f = \frac{f_{CLK}}{16}
 $$ 
 
 $$
-f = \frac{$1.79\mathrm{MHz}$}{16}
+f = \frac{1.79\mathrm{MHz}}{16}
 $$ 
 
 $$
-f = $112\mathrm{KHz}$
+f = 112\mathrm{KHz}
 $$
 
 Cercano al valor obtenido en el osciloscopio.
