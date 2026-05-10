@@ -100,11 +100,11 @@ En el caso que reloj este en bajo las salidas tomarán un valor alto, entonces e
 En la etapa de memoria también hay 2 compuertas NAND están conectadas en  realimentación cruzada:
 
 $$
-Q = \overline{X \cdot \overline{Q} }
+Q = \overline{X\cdot\overline{Q}}
 $$
 
 $$
-\overline{Q}  = \overline{Y \cdot Q}
+\overline{Q}  = \overline{Y\cdot Q}
 $$
 
 Esta realimenración permite que el circuito conserve el último esatdo almacenado aun cuando las entradas regresen a cero [5]. 
