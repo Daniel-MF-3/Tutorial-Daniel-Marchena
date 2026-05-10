@@ -85,11 +85,37 @@ Por ultimo, se debe tomar la importacia de cuál bit de salida se escoja para el
 
 Este circuito corresponde un cerrojo SR sincronizado mendiante una señal de reloj y constituido con compuestas NAND. Este tipo de circuitos secuenciales tiene la capcidad de almacenar un bit de información utilizando realimentación entre las compuestas lógicas [4]. Se divide en dos etapas: 1. Habilitación mediante reloh¿j. 2. Etapa de memoria.
 
-En la etaoa de habilitación de reloj esta conformada por 2 NAND que recibe las señales de entradas S R y el reloj (CLK), sus salidas se pueden definir:
+En la etapa de habilitación de reloj esta conformada por 2 NAND que recibe las señales de entradas S R y el reloj (CLK), sus salidas se pueden definir:
 
 $$
-X = (S \cdot CLK)'
+X = \overline{S \cdot CLK}
 $$
+
+$$
+Y = \overline{R \cdot CLK}
+$$
+
+En el caso que reloj este en bajo las salidas tomarán un valor alto, entonces el latch se bloequea y conserva el estado almacenado previamente sin importar los cambios de las entradas S y R [5]. En el  caso que el reloj este en alto, las entradas pueden modificar el estado del lacth [5].
+
+En la etapa de memoria también hay 2 compuertas NAND están conectadas en  realimentación cruzada:
+
+$$
+Q = \overline{X \cdot \overline{Q} }
+$$
+
+$$
+\overline{Q}  = \overline{Y \cdot Q}
+$$
+
+Esta realimenración permite que el circuito conserve el último esatdo almacenado aun cuando las entradas regresen a cero [5]. 
+
+Si está en el caso que $S = 1$ , $R = 0$ y $CLK = 1$, es el estado de SET por lo que $ Q = 1$ y $\overline{Q} = 0$.
+
+Si está en el caso que $S = 0$ , $R = 0$ y $CLK = 1$, es el estado de HOLD por lo que $ Q = 1$ y $\overline{Q} = 0$. Donde las salidas mantienen el mismo valor previo.
+
+Si está en el caso que $S = 0$ , $R = 1$ y $CLK = 1$, es el estado de HOLD por lo que $ Q = 0$ y $\overline{Q} = 1$.
+
+Si está n el caso que $S = 1$ , $R = 1$ y $CLK = 1$, es el estado de inválido por lo que $ Q = 1$ y $\overline{Q} = 1$. Se concidera inválido poruqe puede generar resultados impredecibles por los retardos internos de propagación [6]. 
 
 Se toma la siguiente imagen para armar el circuito:
 
@@ -100,7 +126,7 @@ Se toma la siguiente imagen para armar el circuito:
 Fig 5. Circuito de prueba de un cerrojo SR.
 </p>
 
-Se hará lo mismo que el ejericio anterior, una simulación en multisim para verificar cual es la respueta que se está buscando y cual es el comportamiento de las ondas, para luego compararlo con la respuesta final obtenida en el osciloscopio.
+Se hará lo mismo que el ejericio anterior, una simulación en multisim para verificar cual es la respueta que se está buscando y cual es el comportamiento de las ondas, para luego compararlo con la respuesta final obtenida en el osciloscopio y también ver si cumple con teoría antes establecida.
 
 ### Simulación
 
@@ -197,11 +223,26 @@ Caso S = 1 y R = 1:
 Fig 9. Resultado del osciloscopio del cerrojo de S = 1 y R = 1.
 </p>
 
+Como puede observar los resultados cumplen lo establecido anteriormente y también es similar a lo obtenido en la simulación.
+
+Su tabla de verdad es la siguiente:
+
+<p align="center">
+Tabla 1. Tabla de verdad del cerrojo.
+</p>
+
+<p align="center">
+<img width="770" height="177" alt="image" src="https://github.com/user-attachments/assets/68b1e7a9-b75c-4f02-96e7-d26ea3c82d97" />
+</p>
+
 [1] Fairchild Semiconductor, “DM74LS163A Synchronous 4-Bit Binary Counters,” Datasheet, 2000.
 
 [2] Datasheet Hub, “74LS163 Fully Synchronous 4-Bit Counter,” 2023. [Online]. Available: https://www.datasheethub.com/74ls163-fully-synchronous-4-bit-counter/
 
 [3] ON Semiconductor, “74LS163 Binary Counter Datasheet,” Datasheet, 2004.
-[4] 
 
-[5] 
+[4] C. Garaipoom, “SR Latch Explained: Circuit Variants, Truth Table, and Operation,” ElecCircuit, Feb. 2026. [Online]. Available: https://www.eleccircuit.com/how-sr-latch-works/
+
+[5] “SR Latch Circuit,” ChipVerify. [Online]. Available: https://www.chipverify.com/digital-fundamentals/sr-latch-circuit
+
+[6] SR NAND latch,” Electronics-Course. [Online]. Available: https://electronics-course.com/sr-nand-latch
