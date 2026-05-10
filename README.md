@@ -59,7 +59,7 @@ f = \frac{f_{CLK}}{16}
 $$ 
 
 $$
-f = \frac{$1.79\mathrm{MHz}$}}{16}
+f = \frac{$1.79\mathrm{MHz}$}{16}
 $$ 
 
 $$
