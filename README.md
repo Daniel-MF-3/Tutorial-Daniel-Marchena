@@ -41,7 +41,7 @@ Luego se explicará porque estos comportamientos coherentes y es lo que busca.
 
 ### Resultado obtenido en el Osciloscopio.
 
-En la siguiente imagen se muestra lo que se obtuvo oscilospocio, donde los canales son los mismo que utilizaron en la simualción:
+En la siguiente imagen se muestra lo que se obtuvo oscilospocio, donde los canales son los mismos que utilizaron en la simulación:
 
 <p align="center">
 <img width="1448" height="913" alt="image" src="https://github.com/user-attachments/assets/5ada5999-1b5d-480b-8175-de7032c9a687" />
@@ -115,8 +115,9 @@ Caso S = 1 y R = 0:
 <img width="938" height="528" alt="image" src="https://github.com/user-attachments/assets/64b598ba-b902-4151-ae85-30a181ccbf7d" />
 </p>
 <p align="center">
-Fig 7. Resultado de simulación del cerrojo de S = 1 y R = 0.
+Fig 7. Resultado de la simulación del cerrojo de S = 1 y R = 0.
 </p>
+
 
 Caso S = 0 y R = 0:
 
@@ -124,8 +125,9 @@ Caso S = 0 y R = 0:
 <img width="937" height="530" alt="image" src="https://github.com/user-attachments/assets/6e94f315-b868-4cce-af54-1def613924b7" />
 </p>
 <p align="center">
-Fig 8. Resultado de simulación del cerrojo de S = 0 y R = 0.
+Fig 8. Resultado de la simulación del cerrojo de S = 0 y R = 0.
 </p>
+
 
 Caso S = 0 y R = 1:
 
@@ -133,8 +135,9 @@ Caso S = 0 y R = 1:
 <img width="935" height="528" alt="image" src="https://github.com/user-attachments/assets/a871bd51-ed33-42f0-a4a8-e81903101ca8" />
 </p>
 <p align="center">
-Fig 9. Resultado de simulación del cerrojo de S = 0 y R = 1.
+Fig 9. Resultado de la simulación del cerrojo de S = 0 y R = 1.
 </p>
+
 
 Caso S = 1 y R = 1:
 
@@ -142,7 +145,48 @@ Caso S = 1 y R = 1:
 <img width="947" height="531" alt="image" src="https://github.com/user-attachments/assets/30a0a1a5-801e-49ef-b542-85d9d5174684" />
 </p>
 <p align="center">
-Fig 9. Resultado de simulación del cerrojo de S = 1 y R = 1.
+Fig 9. Resultado de la simulación del cerrojo de S = 1 y R = 1.
+</p>
+
+### Resultado obtenido en el Osciloscopio.
+
+En la siguienteS imagenes se muestra lo que se obtuvo oscilospocio, donde los canales son los mismos que utilizaron en la simulación:
+
+Caso S = 1 y R = 0:
+
+<p align="center">
+<img width="1442" height="915" alt="image" src="https://github.com/user-attachments/assets/f9b02e79-d5f0-45ea-b805-1de91f54ecd6" />
+</p>
+<p align="center">
+Fig 10. Resultado del osciloscopio del cerrojo de S = 1 y R = 0.
+</p>
+
+
+Caso S = 0 y R = 0:
+
+<p align="center">
+<img width="1447" height="912" alt="image" src="https://github.com/user-attachments/assets/93a89553-1d8f-4d23-afac-92a507a8b2ce" />
+</p>
+<p align="center">
+Fig 11. Resultado del osciloscopio del cerrojo de S = 0 y R = 0.
+</p>
+
+Caso S = 0 y R = 1:
+
+<p align="center">
+ <img width="1446" height="917" alt="image" src="https://github.com/user-attachments/assets/d4e85903-c24c-4963-87e4-bfb46fce46c2" />
+</p>
+<p align="center">
+Fig 12. Resultado del osciloscopio del cerrojo de S = 0 y R = 1.
+</p>
+
+Caso S = 1 y R = 1:
+
+<p align="center">
+<img width="1446" height="922" alt="image" src="https://github.com/user-attachments/assets/df4b9392-09ed-4a58-a97d-fb199a03dedd" />
+</p>
+<p align="center">
+Fig 9. Resultado del osciloscopio del cerrojo de S = 1 y R = 1.
 </p>
 
 [1] Fairchild Semiconductor, “DM74LS163A Synchronous 4-Bit Binary Counters,” Datasheet, 2000.
