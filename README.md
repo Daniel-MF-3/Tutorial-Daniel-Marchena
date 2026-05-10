@@ -88,7 +88,7 @@ Este circuito corresponde un cerrojo SR sincronizado mendiante una señal de rel
 En la etapa de habilitación de reloj esta conformada por 2 NAND que recibe las señales de entradas S R y el reloj (CLK), sus salidas se pueden definir:
 
 $$
-X = \overline{S \cdot CLK}
+X = \overline{(S \cdot CLK)}
 $$
 
 $$
