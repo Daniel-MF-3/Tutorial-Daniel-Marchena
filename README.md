@@ -100,7 +100,7 @@ En el caso que reloj este en bajo las salidas tomarán un valor alto, entonces e
 En la etapa de memoria también hay 2 compuertas NAND están conectadas en  realimentación cruzada:
 
 $$
-Q = \overline{X\cdot\overline{Q}}
+Q = \overline{X \cdot\overline{Q}}
 $$
 
 $$
@@ -109,9 +109,9 @@ $$
 
 Esta realimenración permite que el circuito conserve el último esatdo almacenado aun cuando las entradas regresen a cero [5]. 
 
-Si está en el caso que $S = 1$ , $R = 0$ y $CLK = 1$, es el estado de SET por lo que $ Q = 1$ y $\overline{Q} = 0$.
+Si está en el caso que $S = 1$ , $R = 0$ y $CLK = 1$, es el estado de SET por lo que $Q = 1$ y $\overline{Q} = 0$.
 
-Si está en el caso que $S = 0$ , $R = 0$ y $CLK = 1$, es el estado de HOLD por lo que $ Q = 1$ y $\overline{Q} = 0$. Donde las salidas mantienen el mismo valor previo.
+Si está en el caso que $S = 0$ , $R = 0$ y $CLK = 1$, es el estado de HOLD por lo que $Q = 1$ y $\overline{Q} = 0$. Donde las salidas mantienen el mismo valor previo.
 
 Si está en el caso que $S = 0$ , $R = 1$ y $CLK = 1$, es el estado de HOLD por lo que $ Q = 0$ y $\overline{Q} = 1$.
 
