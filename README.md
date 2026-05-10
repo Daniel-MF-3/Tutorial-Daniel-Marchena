@@ -83,6 +83,14 @@ Por ultimo, se debe tomar la importacia de cuál bit de salida se escoja para el
 
 ## Cerrojo Set-Reset con compuertas NAND 
 
+Este circuito corresponde un cerrojo SR sincronizado mendiante una señal de reloj y constituido con compuestas NAND. Este tipo de circuitos secuenciales tiene la capcidad de almacenar un bit de información utilizando realimentación entre las compuestas lógicas [4]. Se divide en dos etapas: 1. Habilitación mediante reloh¿j. 2. Etapa de memoria.
+
+En la etaoa de habilitación de reloj esta conformada por 2 NAND que recibe las señales de entradas S R y el reloj (CLK), sus salidas se pueden definir:
+
+$$
+X = (S \cdot CLK)'
+$$
+
 Se toma la siguiente imagen para armar el circuito:
 
 <p align="center">
