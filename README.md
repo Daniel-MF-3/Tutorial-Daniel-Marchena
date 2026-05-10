@@ -88,11 +88,11 @@ Este circuito corresponde un cerrojo SR sincronizado mendiante una señal de rel
 En la etapa de habilitación de reloj esta conformada por 2 NAND que recibe las señales de entradas S R y el reloj (CLK), sus salidas se pueden definir:
 
 $$
-X = \overline{S \cdot CLK}
+X = \bar{S \cdot CLK}
 $$
 
 $$
-Y = \overline{R \cdot CLK}
+Y = \bar{R \cdot CLK}
 $$
 
 En el caso que reloj este en bajo las salidas tomarán un valor alto, entonces el latch se bloequea y conserva el estado almacenado previamente sin importar los cambios de las entradas S y R [5]. En el  caso que el reloj este en alto, las entradas pueden modificar el estado del lacth [5].
@@ -113,9 +113,9 @@ Si está en el caso que $S = 1$ , $R = 0$ y $CLK = 1$, es el estado de SET por l
 
 Si está en el caso que $S = 0$ , $R = 0$ y $CLK = 1$, es el estado de HOLD por lo que $Q = 1$ y $\overline{Q} = 0$. Donde las salidas mantienen el mismo valor previo.
 
-Si está en el caso que $S = 0$ , $R = 1$ y $CLK = 1$, es el estado de HOLD por lo que $ Q = 0$ y $\overline{Q} = 1$.
+Si está en el caso que $S = 0$ , $R = 1$ y $CLK = 1$, es el estado de HOLD por lo que $Q = 0$ y $\overline{Q} = 1$.
 
-Si está n el caso que $S = 1$ , $R = 1$ y $CLK = 1$, es el estado de inválido por lo que $ Q = 1$ y $\overline{Q} = 1$. Se concidera inválido poruqe puede generar resultados impredecibles por los retardos internos de propagación [6]. 
+Si está n el caso que $S = 1$ , $R = 1$ y $CLK = 1$, es el estado de inválido por lo que $Q = 1$ y $\overline{Q} = 1$. Se concidera inválido poruqe puede generar resultados impredecibles por los retardos internos de propagación [6]. 
 
 Se toma la siguiente imagen para armar el circuito:
 
