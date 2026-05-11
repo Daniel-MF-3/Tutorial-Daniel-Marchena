@@ -1,6 +1,6 @@
-## 5. Ejercicios
+## 11. Ejercicios
 
-En este aparrado, se realizarán 2 ejercicios sobre 2 circuitos, el primero es sobre contadores sincrónicos y el segundo es un cerrojo Set-Reset con compuertas NAND.
+En este apartado, se realizarán 2 ejercicios sobre 2 circuitos, el primero es sobre contadores sincrónicos y el segundo es un cerrojo Set-Reset con compuertas NAND.
 
 
 ## Contadores sincrónicos
@@ -236,6 +236,8 @@ Tabla 1. Tabla de verdad del cerrojo.
 </p>
 
 
+
+## Referencias bibliográficas
 
 [1] Fairchild Semiconductor, “DM74LS163A Synchronous 4-Bit Binary Counters,” Datasheet, 2000.
 
