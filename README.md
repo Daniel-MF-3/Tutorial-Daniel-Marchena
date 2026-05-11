@@ -196,7 +196,7 @@ Fig 10. Resultado del osciloscopio del cerrojo de S = 1 y R = 0.
 </p>
 
 
-Caso $S = 0 y R = 0$:
+Caso $S = 0$ y $R = 0$:
 
 <p align="center">
 <img width="1447" height="912" alt="image" src="https://github.com/user-attachments/assets/93a89553-1d8f-4d23-afac-92a507a8b2ce" />
