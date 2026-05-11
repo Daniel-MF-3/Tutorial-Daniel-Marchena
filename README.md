@@ -88,11 +88,11 @@ Este circuito corresponde un cerrojo SR sincronizado mendiante una señal de rel
 En la etapa de habilitación de reloj esta conformada por 2 NAND que recibe las señales de entradas S R y el reloj (CLK), sus salidas se pueden definir:
 
 $$
-X = \neg(S \cdot CLK)
+X = (S \cdot CLK)'
 $$
 
 $$
-Y = \bar{R \cdot CLK}
+Y = (R \cdot CLK)'
 $$
 
 En el caso que reloj este en bajo las salidas tomarán un valor alto, entonces el latch se bloequea y conserva el estado almacenado previamente sin importar los cambios de las entradas S y R [5]. En el  caso que el reloj este en alto, las entradas pueden modificar el estado del lacth [5].
@@ -232,8 +232,10 @@ Tabla 1. Tabla de verdad del cerrojo.
 </p>
 
 <p align="center">
-<img width="770" height="177" alt="image" src="https://github.com/user-attachments/assets/68b1e7a9-b75c-4f02-96e7-d26ea3c82d97" />
+<img width="753" height="157" alt="image" src="https://github.com/user-attachments/assets/aa5df3d7-967b-43c0-b6a4-416bea4fbaae" />
 </p>
+
+
 
 [1] Fairchild Semiconductor, “DM74LS163A Synchronous 4-Bit Binary Counters,” Datasheet, 2000.
 
