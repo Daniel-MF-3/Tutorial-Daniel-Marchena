@@ -91,7 +91,7 @@ Se muestra el error que se encuentra en la salida del RCO tanto con el analizado
 Fig 5. Error en RCO del contador menos significativo en el analizador lógico.
 </p>
 
-Como era de esperarse, no se observa los picos o deformaciones del RCO (D3) debidoque el analizador lógico solo interpreta nivels digitales y no puede capturar pulsos extremadamente cortos.
+Como era de esperarse, no se observa los picos o deformaciones del RCO (D3) debido que EN el analizador lógico solo interpreta niveles digitales y no puede capturar pulsos extremadamente cortos.
 
 <p align="center">
 <img width="800" height="503" alt="6_1ea1" src="https://github.com/user-attachments/assets/2a0b9b50-18bc-4ef3-ae31-01769b0a8010" />
@@ -100,7 +100,7 @@ Como era de esperarse, no se observa los picos o deformaciones del RCO (D3) debi
 Fig 6. Error en RCO del contador menos significativo de manera analógica.
 </p>
 
-De manera analógica, se pueden obsevar los glitches del salida RCO, esto se debe a los retardos de propagación internos del circuito, pero se logró identificar un glitch definido. El 74LS163 es un contador síncrono, pero sus flip-flops y compuertas lógicas no ocurren a mismo tiempo, porque cada elemento interno tiene un tiempo de propagación finito, por tanto en unos nano segundos aparezcan estados transitorios por momentos [1]. La salida RCO depende de varios bits del contador interno y las señales de habilitación de T y P. La hora del cambio de bits a $1111_2$ a $0000_2$, generan combinaciones temporales incorrectas debido a diferencias en los tiempos de propagación [1].
+De manera analógica, se pueden obsevar los glitches de la salida RCO, esto se debe a los retardos de propagación internos del circuito, pero se no logró identificar un glitch definido. El 74LS163 es un contador síncrono, pero sus flip-flops y compuertas lógicas no ocurren al mismo tiempo, porque cada elemento interno tiene un tiempo de propagación finito, por tanto en unos nano segundos aparezcan estados transitorios por momentos [1]. La salida RCO depende de varios bits del contador interno y las señales de habilitación de T y P. A la hora del cambio de bits a $1111_2$ a $0000_2$, generan combinaciones temporales incorrectas debido a las diferencias en los tiempos de propagación [1].
 
 ### Video de prueba del uso de la FPGA:
 
@@ -125,11 +125,11 @@ En el caso que reloj este en bajo las salidas tomarán un valor alto, entonces e
 En la etapa de memoria también hay 2 compuertas NAND están conectadas en  realimentación cruzada:
 
 $$
-Q = \overline{X \cdot\overline{Q}}
+Q = (X \cdot Q)'
 $$
 
 $$
-\overline{Q}  = \overline{Y\cdot Q}
+\overline{Q}  = (Y \cdot Q)'
 $$
 
 Esta realimentación permite que el circuito conserve el último estado almacenado aun cuando las entradas regresen a cero [5]. 
