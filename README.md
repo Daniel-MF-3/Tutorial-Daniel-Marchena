@@ -31,7 +31,7 @@ En est caso se usa unos modelos de 74LS163 que no son necesarios conectarlos una
 (en práctica si debe tomar en cuenta). El primer canal D0, tomará la señal del reloj, el segundo canal D1 sería la salida de QD del primer 74LS163, el tercer canal D2 sería la salida del QD del segundo 74LS163 y el cuarto canal D3 sería RCO del primer 74LS163. En la siguiente imagen se obtiene el resultado obtenido de la simulación:
 
 <p align="center">
-<img width="931" height="526" alt="image" src="https://github.com/user-attachments/assets/083e10dd-319d-40e9-8aa9-e44291e32020" />
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/083e10dd-319d-40e9-8aa9-e44291e32020" />
 </p>
 <p align="center">
 Fig 3. Resultado del circuito de contadores sincrónicos en cascada en multisim.
@@ -44,7 +44,7 @@ Luego se explicará porque estos comportamientos son coherentes y es lo que se e
 En la siguiente imagen se muestra lo que se obtuvo oscilospocio, donde los canales son los mismos que utilizaron en la simulación:
 
 <p align="center">
-<img width="1448" height="913" alt="image" src="https://github.com/user-attachments/assets/5ada5999-1b5d-480b-8175-de7032c9a687" />
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/5ada5999-1b5d-480b-8175-de7032c9a687" />
 </p>
 <p align="center">
 Fig 4. Resultado obtenido del osciloscopio del circuito de contadores sincrónicos en cascada.
@@ -80,6 +80,31 @@ Para saber que uno de los flip-flops cambie, luego de un flanco positivo del rel
 
 Por ultimo, se debe tomar la importacia de cuál bit de salida se escoja para el osciloscopio, porque cada una posee una frecuencia distinta, en la hoja de datos dice que QD es la frecuencia más baja [1]. Por eso en este caso si utliza QD para facilitar la observación temporal de la señales.
 
+### Error en RCO del contador menos significativo
+
+Se muestra el error que se encuentra en la salida del RCO tanto con el analizador lógico y de manera analógica:
+
+<p align="center">
+<img width="800" height="503" alt="6_1el21" src="https://github.com/user-attachments/assets/01dddfb1-f546-447c-b259-1a5d64c909a3" />
+</p>
+<p align="center">
+Fig 5. Error en RCO del contador menos significativo en el analizador lógico.
+</p>
+
+Como era de esperarse, no se observa los picos o deformaciones del RCO (D3) debidoque el analizador lógico solo interpreta nivels digitales y no puede capturar pulsos extremadamente cortos.
+
+<p align="center">
+<img width="800" height="503" alt="6_1ea1" src="https://github.com/user-attachments/assets/2a0b9b50-18bc-4ef3-ae31-01769b0a8010" />
+</p>
+<p align="center">
+Fig 6. Error en RCO del contador menos significativo de manera analógica.
+</p>
+
+De manera analógica, se pueden obsevar los glitches del salida RCO, esto se debe a los retardos de propagación internos del circuito, pero se logró identificar un glitch definido. El 74LS163 es un contador síncrono, pero sus flip-flops y compuertas lógicas no ocurren a mismo tiempo, porque cada elemento interno tiene un tiempo de propagación finito, por tanto en unos nano segundos aparezcan estados transitorios por momentos [1]. La salida RCO depende de varios bits del contador interno y las señales de habilitación de T y P. La hora del cambio de bits a $1111_2$ a $0000_2$, generan combinaciones temporales incorrectas debido a diferencias en los tiempos de propagación [1].
+
+### Video de prueba del uso de la FPGA:
+
+https://youtu.be/u1_UUCeDtsI
 
 ## Cerrojo Set-Reset con compuertas NAND 
 
@@ -117,13 +142,23 @@ Si está en el caso que $S = 0$ , $R = 1$ y $CLK = 1$, es el estado de RESET por
 
 Si está en el caso que $S = 1$ , $R = 1$ y $CLK = 1$, es el estado de inválido por lo que $Q = 1$ y $\overline{Q} = 1$. Se concidera inválido porque puede generar resultados impredecibles por los retardos internos de propagación [6]. 
 
+Su tabla de verdad es la siguiente:
+
+<p align="center">
+Tabla 1. Tabla de verdad del cerrojo.
+</p>
+
+<p align="center">
+<img width="753" height="157" alt="image" src="https://github.com/user-attachments/assets/aa5df3d7-967b-43c0-b6a4-416bea4fbaae" />
+</p>
+
 Se toma la siguiente imagen para armar el circuito:
 
 <p align="center">
 <img width="490" height="268" alt="image" src="https://github.com/user-attachments/assets/d6e73ada-4fc1-45a4-80a2-939b480fc2ad" />
 </p>
 <p align="center">
-Fig 5. Circuito de prueba de un cerrojo SR.
+Fig 7. Circuito de prueba de un cerrojo SR.
 </p>
 
 Se hará lo mismo que el ejericio anterior, una simulación en multisim para verificar cual es la respueta que se está buscando y cual es el comportamiento de las ondas, para luego compararlo con la respuesta final obtenida en el osciloscopio y también ver si cumple con la teoría antes establecida.
@@ -136,7 +171,7 @@ En la siguiente imagen, se mostrar como se implemento el circuito en multisim:
 <img width="1293" height="527" alt="image" src="https://github.com/user-attachments/assets/721d9d95-3c3f-4e5c-adc3-526c2ede9291" />
 </p>
 <p align="center">
-Fig 6. Circuito de prueba de un cerrojo SR en multisim. 
+Fig 8. Circuito de prueba de un cerrojo SR en multisim. 
 </p>
 
 En este caso en el simulador se está utilizando un 74LS00D al no tener un 74CHOO en el simulador, sin embargo es una opción alternativa al tener las mismas funciones. También se utiliza un reloj en $1\mathrm{kHz}$ para más comodidad. El primer canal D0 tomará la señal del reloj, el segundo canal D1 tomará la señal de $S$, el tercer canal D2 será $R$, el cuarto canal D3 sera la salida de $Q$ y el quinto canal D4 será la salida de $\overline{Q}$. 
@@ -149,7 +184,7 @@ Caso $S = 1$ y $R = 0$:
 <img width="938" height="528" alt="image" src="https://github.com/user-attachments/assets/64b598ba-b902-4151-ae85-30a181ccbf7d" />
 </p>
 <p align="center">
-Fig 7. Resultado de la simulación del cerrojo de S = 1 y R = 0.
+Fig 9. Resultado de la simulación del cerrojo de S = 1 y R = 0.
 </p>
 
 
@@ -159,7 +194,7 @@ Caso $S = 0$ y $R = 0$:
 <img width="937" height="530" alt="image" src="https://github.com/user-attachments/assets/6e94f315-b868-4cce-af54-1def613924b7" />
 </p>
 <p align="center">
-Fig 8. Resultado de la simulación del cerrojo de S = 0 y R = 0.
+Fig 10. Resultado de la simulación del cerrojo de S = 0 y R = 0.
 </p>
 
 
@@ -169,7 +204,7 @@ Caso $S = 0$ y $R = 1$:
 <img width="935" height="528" alt="image" src="https://github.com/user-attachments/assets/a871bd51-ed33-42f0-a4a8-e81903101ca8" />
 </p>
 <p align="center">
-Fig 9. Resultado de la simulación del cerrojo de S = 0 y R = 1.
+Fig 11. Resultado de la simulación del cerrojo de S = 0 y R = 1.
 </p>
 
 
@@ -179,7 +214,7 @@ Caso $S = 1$ y $R = 1$:
 <img width="947" height="531" alt="image" src="https://github.com/user-attachments/assets/30a0a1a5-801e-49ef-b542-85d9d5174684" />
 </p>
 <p align="center">
-Fig 9. Resultado de la simulación del cerrojo de S = 1 y R = 1.
+Fig 12. Resultado de la simulación del cerrojo de S = 1 y R = 1.
 </p>
 
 ### Resultado obtenido en el Osciloscopio.
@@ -189,52 +224,66 @@ En la siguienteS imagenes se muestra lo que se obtuvo oscilospocio, donde los ca
 Caso $S = 1$ y $R = 0$:
 
 <p align="center">
-<img width="1442" height="915" alt="image" src="https://github.com/user-attachments/assets/f9b02e79-d5f0-45ea-b805-1de91f54ecd6" />
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/f9b02e79-d5f0-45ea-b805-1de91f54ecd6" />
 </p>
 <p align="center">
-Fig 10. Resultado del osciloscopio del cerrojo de S = 1 y R = 0.
+Fig 13. Resultado del osciloscopio del cerrojo de S = 1 y R = 0.
 </p>
 
 
 Caso $S = 0$ y $R = 0$:
 
 <p align="center">
-<img width="1447" height="912" alt="image" src="https://github.com/user-attachments/assets/93a89553-1d8f-4d23-afac-92a507a8b2ce" />
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/93a89553-1d8f-4d23-afac-92a507a8b2ce" />
 </p>
 <p align="center">
-Fig 11. Resultado del osciloscopio del cerrojo de S = 0 y R = 0.
+Fig 14. Resultado del osciloscopio del cerrojo de S = 0 y R = 0.
 </p>
 
 Caso $S = 0$ y $R = 1$:
 
 <p align="center">
- <img width="1446" height="917" alt="image" src="https://github.com/user-attachments/assets/d4e85903-c24c-4963-87e4-bfb46fce46c2" />
+ <img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/d4e85903-c24c-4963-87e4-bfb46fce46c2" />
 </p>
 <p align="center">
-Fig 12. Resultado del osciloscopio del cerrojo de S = 0 y R = 1.
+Fig 15. Resultado del osciloscopio del cerrojo de S = 0 y R = 1.
 </p>
 
 Caso $S = 1$ y $R = 1$:
 
 <p align="center">
-<img width="1446" height="922" alt="image" src="https://github.com/user-attachments/assets/df4b9392-09ed-4a58-a97d-fb199a03dedd" />
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/df4b9392-09ed-4a58-a97d-fb199a03dedd" />
 </p>
 <p align="center">
-Fig 9. Resultado del osciloscopio del cerrojo de S = 1 y R = 1.
+Fig 16. Resultado del osciloscopio del cerrojo de S = 1 y R = 1.
 </p>
 
 Como puede observar los resultados cumplen lo establecido anteriormente y también es similar a lo obtenido en la simulación.
 
-Su tabla de verdad es la siguiente:
+### Circuito
 
 <p align="center">
-Tabla 1. Tabla de verdad del cerrojo.
+<img width="561" height="420" alt="image" src="https://github.com/user-attachments/assets/06d94db6-23d2-4dfa-b29a-add680fe2540" />
 </p>
-
 <p align="center">
-<img width="753" height="157" alt="image" src="https://github.com/user-attachments/assets/aa5df3d7-967b-43c0-b6a4-416bea4fbaae" />
+Fig 17. Diagrama del cricuito cerrojo SR.
 </p>
 
+
+### Utilidades del cerrojo
+
+Este circuito puede ser utilizado en:
+
+- Almacemanineto temporal de un bit de información.
+- Eliminación de rebotes pulsadores (debouncer).
+- Sincronización de señales digitales.
+- Construcción de flip-flops complejos.
+- Diseños de registros y memorias.
+
+
+### Video de prueba del uso de la FPGA:
+
+https://youtu.be/HzC8ifVztvk
 
 
 ## Referencias bibliográficas
